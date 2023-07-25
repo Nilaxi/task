@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+    .box{
+        width: 100px;
+        height: 100px;
+        border: 6px solid black;
+        margin-bottom: 20px;
+    }
+    </style>
+</head>
+<body>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <div class="box" onclick="changeColor(event)" onmouseover="borderChange(event)" onmouseout="borderChange(event)"></div>
+    <script>
+        var check = true;
+        function changeColor(event){
+            var element = event.target;
+            if(check){
+                element.style.backgroundColor = "green";
+                check = false;
+            }
+            else{
+                element.style.backgroundColor = "red";
+                check = true;
+            }
+        }
+
+        var checkBorder = true;
+        function borderChange(event){
+            var element = event.target;
+            if(checkBorder){
+                element.style.borderColor = "blue";
+                checkBorder = false;
+            }
+            else{
+                element.style.borderColor = "black";
+                checkBorder = true;
+            }
+        }
+     </script>
+</body>
+
+</html>
